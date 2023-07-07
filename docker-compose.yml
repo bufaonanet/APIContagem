@@ -1,0 +1,15 @@
+services:
+  redis-db:
+    container_name: redis-db
+    image: redis:alpine
+    restart: always
+    ports:
+      - "6379:6379"
+  mongo-db:
+    image: mongo
+    container_name: mongo-db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: MongoDB2022!
+    ports:
+      - "27017:27017" 
